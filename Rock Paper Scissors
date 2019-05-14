@@ -1,0 +1,20 @@
+Make a two-player Rock-Paper-Scissors game. (Hint: Ask for player plays (using input), 
+compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game)
+
+answer = 'y'
+
+while answer == 'y':
+    player_1 = input("Enter 'r', 'p' or 's'. ")
+    player_2 = input("Enter 'r', 'p' or 's'. ")
+    
+    if player_1 == 'r' and player_2 == 'r' or player_1 == 'p' and player_2 == 'p' or player_1 == 's' and player_2 == 's':
+        print("It's a tie!")
+        answer = input("Press 'y' to play again or press any button to quit. ")
+    elif player_1 == 'r' and player_2 == 's' or player_1 == 'p' and player_2 == 'r' or player_1 == 's' and player_2 == 'p':
+        print('Player 1 wins!')
+        answer = input("Press 'y' to play again or press any button to quit. ")
+    else:
+        print('Player 2 wins!')
+        answer = input("Press 'y' to play again or press any button to quit. ")
+        
+    
