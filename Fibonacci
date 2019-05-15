@@ -1,0 +1,24 @@
+Write a program that asks the user how many Fibonnaci numbers to generate and then generates them. 
+Take this opportunity to think about how you can use functions. 
+Make sure to ask the user to enter the number of numbers in the sequence to generate.
+
+----------------------------------------------------------------------------------------------------
+def fib_gen(num):
+    fib = []
+    if num == 0:
+        print('none')
+    elif num == 1:
+        fib.append(1)
+        return fib
+    else:
+        count = 2
+        fib.append(1)
+        fib.append(1)
+        while count < num:
+            fib.append(fib[count-1] + fib[count-2])
+            count += 1
+        return fib
+
+while 1:
+    fib_nums = fib_gen(int(input("How many Fibonacci Numbers do you want to generate? ")))
+    print(fib_nums)
