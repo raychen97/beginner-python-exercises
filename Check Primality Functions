@@ -1,0 +1,23 @@
+Ask the user for a number and determine whether the number is prime or not.
+
+----------------------------------------------------------------------------
+def isPrime (num):
+    counter = num - 1
+    while counter != 0:
+        if num%counter == 0:
+            if counter != 1:
+                result = False
+                break
+            else:
+                result = True
+                return result
+        else:
+            counter -= 1
+
+while 1:
+    number = isPrime(int(input("Enter a number ")))
+
+    if number == True:
+        print("It's prime!")
+    else:
+        print("It's not prime!")
