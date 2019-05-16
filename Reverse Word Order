@@ -1,0 +1,18 @@
+Write a program (using functions!) that asks the user for a long string containing multiple words. 
+Print back to the user the same string, except with the words in backwards order.
+
+----------------------------------------------------------------------------------------------------
+def reverse_string(sentence_text):
+    sentence_split = sentence.split()
+    x = sentence_split[::-1]
+    reverse_sen = []
+    
+    for n in x:
+        reverse_sen.append(n)
+
+    final = ' '.join(reverse_sen)
+    return final
+
+sentence = input("Enter a sentence! ")
+
+print(reverse_string(sentence))
